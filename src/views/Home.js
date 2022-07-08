@@ -10,7 +10,7 @@ export default class Home extends Component {
     }
 
     componentDidMount(){
-        fetch('postgres://tgcibbxy:wh7D1iFId2OcZTO633cLvEwvL0SUephantsql.com/tgcibbxy')
+        fetch('postgresql://ltyhscaa:gwplgirsmnWS6b80ViNGxvaxSSXm6gHh@lallah.db.elephantsql.com/ltyhscaa')
             .then(res => res.json())
             .then(data => this.setState({posts:data}))
     }

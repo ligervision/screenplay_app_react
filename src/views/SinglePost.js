@@ -10,7 +10,7 @@ export default function SinglePost(props) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`postgres://tgcibbxy:wh7D1iFId2OcZTO633cLvEwvL0SUephantsql.com/tgcibbxy/${postId}`)
+        fetch(`postgresql://ltyhscaa:gwplgirsmnWS6b80ViNGxvaxSSXm6gHh@lallah.db.elephantsql.com/ltyhscaa/${postId}`)
             .then(res => res.json())
             .then(data => setPost(data))
     }, [postId])
@@ -28,7 +28,7 @@ export default function SinglePost(props) {
             content: e.target.content.value
         })
 
-        fetch(`postgres://tgcibbxy:wh7D1iFId2OcZTO633cLvEwvL0SUephantsql.com/tgcibbxy/${postId}`,{
+        fetch(`postgresql://ltyhscaa:gwplgirsmnWS6b80ViNGxvaxSSXm6gHh@lallah.db.elephantsql.com/ltyhscaa/${postId}`,{
             method: 'PUT',
             headers: myHeaders,
             body: data
@@ -48,7 +48,7 @@ export default function SinglePost(props) {
         let myHeaders = new Headers();
         myHeaders.append('Authorization', `Bearer ${localStorage.getItem('token')}`)
 
-        fetch(`postgres://tgcibbxy:wh7D1iFId2OcZTO633cLvEwvL0SUephantsql.com/tgcibbxy/${postId}`, {
+        fetch(`postgresql://ltyhscaa:gwplgirsmnWS6b80ViNGxvaxSSXm6gHh@lallah.db.elephantsql.com/ltyhscaa/${postId}`, {
             method: 'DELETE',
             headers: myHeaders
         }).then(res => {

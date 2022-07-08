@@ -26,7 +26,7 @@ export default function Register(props) {
                 password: password
             })
 
-            fetch('https://kekambas-blog.herokuapp.com/auth/users', {
+            fetch('http://127.0.0.1:5000/auth/users', {
                 method: "POST",
                 headers: myHeaders,
                 body: data

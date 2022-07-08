@@ -20,7 +20,7 @@ export default class Login extends Component {
         let myHeaders = new Headers();
         myHeaders.append('Authorization', `Basic ${encodedUserPass}`);
 
-        fetch('https://kekambas-blog.herokuapp.com/auth/token', {
+        fetch('http://127.0.0.1:5000/auth/token', {
             method: "POST",
             headers: myHeaders
         }).then(res => {

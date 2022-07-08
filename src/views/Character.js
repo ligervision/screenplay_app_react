@@ -26,7 +26,7 @@ export default function CreatePost(props) {
         let content = e.target.content.value;
         let data = JSON.stringify({title,content})
 
-        fetch('postgres://tgcibbxy:wh7D1iFId2OcZTO633cLvEwvL0SUephantsql.com/tgcibbxy', {
+        fetch('postgresql://ltyhscaa:gwplgirsmnWS6b80ViNGxvaxSSXm6gHh@lallah.db.elephantsql.com/ltyhscaa', {
             method: 'POST',
             headers: myHeaders,
             body: data
