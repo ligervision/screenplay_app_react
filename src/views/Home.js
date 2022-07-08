@@ -10,7 +10,7 @@ export default class Home extends Component {
     }
 
     componentDidMount(){
-        fetch('https://kekambas-blog.herokuapp.com/blog/posts')
+        fetch('postgres://tgcibbxy:wh7D1iFId2OcZTO633cLvEwvL0SUephantsql.com/tgcibbxy')
             .then(res => res.json())
             .then(data => this.setState({posts:data}))
     }
@@ -29,11 +29,12 @@ export default class Home extends Component {
     render() {
         return (
             <>
-                <h1 className='text-center'><b>The Trial</b> blog</h1>
+                {/* SCREENPLAY TITLE needs to be called */}
+                <h1 className='text-center'><b>STAR WARS</b> screenplay</h1>
                 <hr></hr>
                 <div className='offset-8 col-4'>
                     <select onChange={(e) => this.sortPosts(e.target.value)} className='form-select'>
-                        <option>Sort Posts</option>
+                        <option>Sort Scenes</option>
                         <option value='byDateAsc'>By Date Ascending</option>
                         <option value='byDateDesc'>By Date Descending</option>
                         <option value='byTitleAsc'>By Title Ascending</option>
@@ -43,7 +44,7 @@ export default class Home extends Component {
 
                 <div className='d-flex justify-content-between'>
                     <div className='col-5 text-muted'>
-                        <br></br>Viewing scenes for <b>The Trial</b> > Chapter One:
+                        <br></br>Viewing scenes for <b>STAR WARS</b> > Chapter One:
                         <br></br>
                         <br></br>
                         <ul class="no-bullets">
@@ -75,7 +76,7 @@ export default class Home extends Component {
                         </div>
                         <div class="offcanvas-body">
                             <div>
-                                <p className="text-muted">PLOT ELEMENTS for <b>'THE TRIAL'</b></p> 
+                                <p className="text-muted">PLOT ELEMENTS for <b>'STAR WARS'</b></p> 
                             </div>
                             <div class="dropdown mt-3">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
@@ -83,17 +84,18 @@ export default class Home extends Component {
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <li><a class="dropdown-item" href="#">3-Act Structure</a></li>
-                                <li><a class="dropdown-item" href="#">3-Act Structure (Campbell's Hero's Journey</a></li>
+                                <li><a class="dropdown-item" href="#">3-Act Structure (Campbell's Hero's Journey)</a></li>
+                                <li><a class="dropdown-item" href="#">3-Act Structure (Vogler's Mythic)</a></li>
                                 <li><a class="dropdown-item" href="#">4-Act Structure</a></li>
                                 <li><a class="dropdown-item" href="#">4-Act Structure (Snyder's Save the Cat)</a></li>
+                                <li><a class="dropdown-item" href="#">Classical 7-Step Structure</a></li>
                                 <li><a class="dropdown-item" href="#">Quest Structure (Propp's Functions)</a></li>
-                                <li><a class="dropdown-item" href="#">Truby's 22 Steps</a></li>
+                                <li><a class="dropdown-item" href="#">Blockbuster Structure (Truby's 22 Steps)</a></li>
                             </ul>
                             </div>
                         </div>
                     </div>
                     </div>
-
                     <div className='col-7'>
                             {this.state.posts.map(p => <PostCard post={p} key={p.id} />)}
                     </div>

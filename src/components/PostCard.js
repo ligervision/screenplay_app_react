@@ -6,7 +6,7 @@ export default function PostCard({ post }) {
         <>
             <br></br>
             <div className='card border-primary mb-3'>
-                <div className = 'card-header bg-warning bg-opacity-25 text-muted'>THE TRIAL
+                <div className = 'card-header bg-warning bg-opacity-25 text-muted'>STAR WARS
                     <Link to={`/posts/${post.id}`}>
                         <h5 className='card-title'>{ post.title }</h5>
                     </Link>

@@ -10,7 +10,7 @@ export default function SinglePost(props) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`https://kekambas-blog.herokuapp.com/blog/posts/${postId}`)
+        fetch(`postgres://tgcibbxy:wh7D1iFId2OcZTO633cLvEwvL0SUephantsql.com/tgcibbxy/${postId}`)
             .then(res => res.json())
             .then(data => setPost(data))
     }, [postId])
@@ -28,7 +28,7 @@ export default function SinglePost(props) {
             content: e.target.content.value
         })
 
-        fetch(`https://kekambas-blog.herokuapp.com/blog/posts/${postId}`,{
+        fetch(`postgres://tgcibbxy:wh7D1iFId2OcZTO633cLvEwvL0SUephantsql.com/tgcibbxy/${postId}`,{
             method: 'PUT',
             headers: myHeaders,
             body: data
@@ -48,7 +48,7 @@ export default function SinglePost(props) {
         let myHeaders = new Headers();
         myHeaders.append('Authorization', `Bearer ${localStorage.getItem('token')}`)
 
-        fetch(`https://kekambas-blog.herokuapp.com/blog/posts/${postId}`, {
+        fetch(`postgres://tgcibbxy:wh7D1iFId2OcZTO633cLvEwvL0SUephantsql.com/tgcibbxy/${postId}`, {
             method: 'DELETE',
             headers: myHeaders
         }).then(res => {
@@ -63,22 +63,31 @@ export default function SinglePost(props) {
 
     return (
         <>
-            <PostCard post={post} />
-            <button className='btn btn-info w-50 mt-3' onClick={()=>{setEditMode(!editMode)}}>Edit</button>
-            <button className='btn btn-danger w-50 mt-3' onClick={deletePost}>Delete</button>
-            {editMode ? (
-                <form onSubmit={handleSubmit} className='mt-5'>
-                    <div className='from-group'>
-                        <label htmlFor='title'>Title</label>
-                        <input type='text' name='title' className='form-control' defaultValue={post.title} />
-
-                        <label htmlFor='content'>Content</label>
-                        <input type='text' name='content' className='form-control' defaultValue={post.content} />
-
-                        <input type='submit' className='btn btn-primary w-100 mt-3' value='Edit Post' />
-                    </div>
-                </form>
-            ) : null}
+            <div className='d-flex justify-content-between'>
+                <div className='col-4'>
+                    <h4><br></br><strong>SCENES</strong>
+                    <p><br></br>Edit Scene</p></h4>
+                </div>
+                <div className='col-7'>
+                    <PostCard post={post} />
+                    
+                    <button className='btn btn-primary w-25' onClick={()=>{setEditMode(!editMode)}}>Edit This Scene</button>
+                    <button className='btn btn-danger w-25' onClick={deletePost}>Delete This Scene</button>
+                    {editMode ? (
+                            <form onSubmit={handleSubmit}>
+                                <div className='form-group'>
+                                    <br></br>
+                                    <label htmlFor='title'><strong>New Slug Line</strong></label>
+                                    <input type='text' name='title' className='form-control' placeholder='slug line -- e.g. "INT. ABANDONED WAREHOUSE - NIGHT"' />
+                                    <br></br>
+                                    <label htmlFor='content'><strong>New Scene Body</strong></label>
+                                    <textarea className="form-control" name="content" rows="10" placeholder='scene body'></textarea>
+                                    <input type='submit' className='btn btn-primary w-25' value='Submit Edit >>' />
+                                </div>
+                            </form>
+                    ) : null}
+                </div>
+            </div>
         </>
     )
 }
