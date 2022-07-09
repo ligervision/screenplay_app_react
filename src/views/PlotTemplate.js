@@ -11,7 +11,7 @@ export default function CreatePost(props) {
 
     useEffect(() => {
         if (!loggedIn){
-            flashMessage('You must be logged in to scene a post', 'danger');
+            flashMessage('You must be logged in to create a scene', 'danger');
             navigate('/login')
         }
     }, [loggedIn, flashMessage, navigate])
