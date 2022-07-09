@@ -58,7 +58,7 @@ export default class Home extends Component {
                                 
                             </li>
                             <ol>
-                                <li className='text-primary'>The Ordinary World</li>                                
+                                <li className='text-primary'><strong>The Ordinary World</strong></li>                                
                                 <li>Call to Adventure</li>
                                 <li>Refusal of the Call</li>
                                 <li>Crossing the Threshold</li>
