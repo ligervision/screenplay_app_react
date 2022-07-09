@@ -42,9 +42,10 @@ export default class Home extends Component {
                     </select><br></br>
                 </div>
 
+                {/* Left side -- Table of Contents */}
                 <div className='d-flex justify-content-between'>
                     <div className='col-5 text-muted'>
-                        <br></br>Viewing scenes for &nbsp; <b>STAR WARS</b> &nbsp; > &nbsp; 1. Ordinary World:
+                        <br></br>Viewing scenes for <b>STAR WARS</b> &nbsp; > &nbsp; 1. Ordinary World:
                         <br></br>
                         <br></br>
                         <ul class="no-bullets">
@@ -81,67 +82,70 @@ export default class Home extends Component {
                         <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                             Show Story Structure
                         </button>
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Story Structure</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
 
-                        {/* OFFCANVAS BODY */}
-                        <div class="offcanvas-body">
-
-                            {/* Plot Elements for [ SCREENPLAY TITLE ] */}
-                            <div>
-                                <p className="text-muted">PLOT ELEMENTS for <b>'STAR WARS'</b></p> 
+                        {/* start OFFCANVAS */}
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Story Structure</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
-                            
-                            {/* PLOT TEMPLATE DROP-DOWN MENU */}
-                            <div class="dropdown mt-3">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                    Select Plot Template
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">3-Act Structure</a></li>
-                                    <li><a class="dropdown-item" href="#">3-Act Structure (Campbell's Hero's Journey)</a></li>
-                                    <li><a class="dropdown-item" href="#">3-Act Structure (Vogler's Mythic)</a></li>
-                                    <li><a class="dropdown-item" href="#">4-Act Structure</a></li>
-                                    <li><a class="dropdown-item" href="#">4-Act Structure (Snyder's Save the Cat)</a></li>
-                                    <li><a class="dropdown-item" href="#">Classical 7-Step Structure</a></li>
-                                    <li><a class="dropdown-item" href="#">Quest Structure (Propp's Functions)</a></li>
-                                    <li><a class="dropdown-item" href="#">Blockbuster Structure (Truby's 22 Steps)</a></li>
+
+                            {/* OFFCANVAS BODY */}
+                            <div class="offcanvas-body">
+
+                                {/* Plot Elements for [ SCREENPLAY TITLE ] */}
+                                <div>
+                                    <p className="text-muted">PLOT ELEMENTS for <b>STAR WARS</b></p> 
+                                </div>
+                                
+                                {/* PLOT TEMPLATE drop-down menu */}
+                                <div class="dropdown mt-3">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                                        Select Plot Template
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#">3-Act Structure</a></li>
+                                        <li><a class="dropdown-item" href="#">3-Act Structure (Campbell's Hero's Journey)</a></li>
+                                        <li><a class="dropdown-item" href="#">3-Act Structure (Vogler's Mythic)</a></li>
+                                        <li><a class="dropdown-item" href="#">4-Act Structure</a></li>
+                                        <li><a class="dropdown-item" href="#">4-Act Structure (Snyder's Save the Cat)</a></li>
+                                        <li><a class="dropdown-item" href="#">Classical 7-Step Structure</a></li>
+                                        <li><a class="dropdown-item" href="#">Quest Structure (Propp's Functions)</a></li>
+                                        <li><a class="dropdown-item" href="#">Blockbuster Structure (Truby's 22 Steps)</a></li>
+                                    </ul>
+                                </div>
+
+                                {/* PLOT TEMPLATE - Table of Contents */}
+                                <ul class="no-bullets">
+                                    <li>
+                                        <br></br>
+                                        <div className = 'card-header col-6 bg-info bg-opacity-25'>
+                                            <label htmlFor='outline'><h6><strong>Hero's Journey</strong></h6></label>
+                                        </div>  
+                                    </li>
+                                    <ol>
+                                        <li className='text-primary'><strong>The Ordinary World</strong></li>                                
+                                        <li>Call to Adventure</li>
+                                        <li>Refusal of the Call</li>
+                                        <li>Crossing the Threshold</li>
+                                        <li>Tests, Allies, and Enemies</li>
+                                        <li>The Approach</li>
+                                        <li>The Ordeal</li>
+                                        <li>The Reward</li>
+                                        <li>The Road Back</li>
+                                        <li>The Resurrection</li>
+                                        <li>The Return</li>
+                                    </ol>
                                 </ul>
-                            </div>
-
-
-                            <ul class="no-bullets">
-                                <li>
-                                <br></br>
-                                    <div className = 'card-header col-6 bg-info bg-opacity-25'>
-                                        <label htmlFor='outline'><h6><strong>Hero's Journey</strong></h6></label>
-                                    </div>
-                                    <p>   
-                                        
-                                    </p>
-                                    
-                                </li>
-                                <ol>
-                                    <li className='text-primary'><strong>The Ordinary World</strong></li>                                
-                                    <li>Call to Adventure</li>
-                                    <li>Refusal of the Call</li>
-                                    <li>Crossing the Threshold</li>
-                                    <li>Tests, Allies, and Enemies</li>
-                                    <li>The Approach</li>
-                                    <li>The Ordeal</li>
-                                    <li>The Reward</li>
-                                    <li>The Road Back</li>
-                                    <li>The Resurrection</li>
-                                    <li>The Return</li>
-                                </ol>
-                            </ul>
+                            </div>  
+                            {/* End OFFCANVAS BODY */}
 
                         </div>
+                        {/* End OFFCANVAS */}
+
                     </div>
-                    </div>
+
+                    {/* SORTED POSTS DISPLAY HERE */}
                     <div className='col-7'>
                             {this.state.posts.map(p => <PostCard post={p} key={p.id} />)}
                     </div>
