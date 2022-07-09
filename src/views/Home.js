@@ -48,16 +48,25 @@ export default class Home extends Component {
                         <br></br>
                         <br></br>
                         <ul class="no-bullets">
-                            <li className='text-primary'>Chapter 1</li>
-                            <li>Chapter 2</li>
-                            <li>Chapter 3</li>
-                            <li>Chapter 4</li>
-                            <li>Chapter 5</li>
-                            <li>Chapter 6</li>
-                            <li>Chapter 7</li>
-                            <li>Chapter 8</li>
-                            <li>Chapter 9</li>
-                            <li>Chapter 10</li>
+                            <li>
+                                <p>   
+                                    Hero's Journey
+                                </p>
+                                
+                            </li>
+                            <ol>
+                                <li className='text-primary'>The Ordinary World</li>                                
+                                <li>Call to Adventure</li>
+                                <li>Refusal of the Call</li>
+                                <li>Crossing the Threshold</li>
+                                <li>Tests, Allies, and Enemies</li>
+                                <li>The Approach</li>
+                                <li>The Ordeal</li>
+                                <li>The Reward</li>
+                                <li>The Road Back</li>
+                                <li>The Resurrection</li>
+                                <li>The Return</li>
+                            </ol>
                         </ul>
                         <br></br>
                         <p className="form-group form-check">
