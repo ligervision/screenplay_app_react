@@ -44,13 +44,16 @@ export default class Home extends Component {
 
                 <div className='d-flex justify-content-between'>
                     <div className='col-5 text-muted'>
-                        <br></br>Viewing scenes for <b>STAR WARS</b> > Chapter One:
+                        <br></br>Viewing scenes for &nbsp; <b>STAR WARS</b> &nbsp; > &nbsp; 1. Ordinary World:
                         <br></br>
                         <br></br>
                         <ul class="no-bullets">
                             <li>
+                                <div className = 'card-header col-6 bg-info bg-opacity-25'>
+                                    <label htmlFor='outline'><h6><strong>Hero's Journey</strong></h6></label>
+                                </div>
                                 <p>   
-                                    Hero's Journey
+                                    
                                 </p>
                                 
                             </li>
